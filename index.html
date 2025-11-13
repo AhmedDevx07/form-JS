@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elite Property Hub</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container2">
+      <div class="firstBox">
+        <section
+          id="signupSection"
+          class="vh-100 d-flex align-items-center bg-light"
+        >
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-12 col-md-8 col-lg-5">
+                <div class="card shadow-lg border-0 p-4 rounded-4 bg-white">
+                  <div class="text-center mb-4">
+                    <h3 class="fw-bold mb-1">Create your account</h3>
+                    <p class="text-muted small mb-0 status1">
+                      Join us today — it’s fast and easy!
+                    </p>
+                  </div>
+
+                  <form id="signupForm" novalidate>
+                    <div class="mt-3">
+                      <label for="signupEmail" class="form-label"
+                        >Email address</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="signupEmail"
+                        placeholder="you@example.com"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please enter a valid email
+                      </div>
+                    </div>
+
+                    <div class="mt-3">
+                      <label for="signupPassword" class="form-label"
+                        >Password</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="signupPassword"
+                        placeholder="••••••••"
+                        required
+                      />
+                      <div class="invalid-feedback">Minimum 6 characters</div>
+                    </div>
+
+                    <div class="d-grid mt-4">
+                      <button
+                        onclick="signup()"
+                        type="button"
+                        class="btn btn-primary py-2 fw-semibold"
+                      >
+                        Sign Up
+                      </button>
+                    </div>
+
+                    <div class="text-center mt-3 small text-muted">
+                      Already have an account?
+                      <a onclick="firstLogin()" href="#" id="toLogin">Log in</a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="secondBox" style="display: none">
+        <section
+          id="signupSection"
+          class="vh-100 d-flex align-items-center bg-light"
+        >
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-12 col-md-8 col-lg-5">
+                <div class="card shadow-lg border-0 p-4 rounded-4 bg-white">
+                  <div class="text-center mb-4">
+                    <h3 class="fw-bold mb-1">Welcome back</h3>
+                    <p class="text-muted small mb-0 status1">
+                      Login to continue to your account
+                    </p>
+                  </div>
+
+                  <form id="signupForm" novalidate>
+                    <div class="mt-3">
+                      <label for="signupEmail" class="form-label"
+                        >Email address</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="loginEmail"
+                        placeholder="you@example.com"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please enter a valid email
+                      </div>
+                    </div>
+
+                    <div class="mt-3">
+                      <label for="signupPassword" class="form-label"
+                        >Password</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="loginPassword"
+                        placeholder="••••••••"
+                        required
+                      />
+                      <div class="invalid-feedback">Minimum 6 characters</div>
+                    </div>
+
+                    <div class="d-grid mt-4">
+                      <button
+                        onclick="login()"
+                        type="button"
+                        class="btn btn-primary py-2 fw-semibold"
+                      >
+                        Log in
+                      </button>
+                    </div>
+
+                    <div class="text-center mt-3 small text-muted">
+                      Back to Sign up?
+                      <a onclick="againSignup()" href="#" id="toLogin"
+                        >Sign up</a
+                      >
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="container1 position-relative" style="display: none">
+      <nav class="navbar bg-primary px-3 position-sticky top-0 start-0 z-1">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white fs-3 fw-semibold">Elite</a>
+          <form class="d-flex" role="search">
+            <button
+              onclick="logout()"
+              class="btn btn-outline-light me-2 btn3"
+              type="button"
+            >
+              Logout
+            </button>
+          </form>
+        </div>
+      </nav>
+      <div
+        class="box1 container-fluid d-flex justify-content-center align-items-center flex-column"
+      >
+        <h1>Elite Property Hub</h1>
+        <h6 class="fh">Find luxury & modern homes — Pakistan listings</h6>
+        <nav class="navbar">
+          <div class="container-fluid">
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                id="form-control"
+                type="search"
+                placeholder="Search by State, City, Area, House name or feature..."
+                aria-label="Search"
+              />
+              <button
+                onclick="searchData()"
+                class="btn btn-primary me-2 btn1"
+                type="button"
+              >
+                Search
+              </button>
+              <button
+                onclick="showAll()"
+                class="btn btn-primary me-2 btn3"
+                type="button"
+              >
+                ShowAll
+              </button>
+            </form>
+          </div>
+        </nav>
+      </div>
+      <div class="box2 container-fluid p-4">
+        <div class="row d-flex justify-content-center gap-3" id="row"></div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
