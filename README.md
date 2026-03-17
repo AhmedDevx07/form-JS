@@ -1,6 +1,4 @@
  
----
-
 # 🏠 Elite Property Hub
 
 **Elite Property Hub** is a modern, responsive **Login & Signup Form** project built with **HTML, CSS, and JavaScript**, designed around a **real estate theme**. It serves as a clean and interactive interface for users to register and log in, suitable for learning, prototyping, or showcasing in a portfolio.
@@ -48,13 +46,16 @@
 
 ---
 
-## 👤 Author
-
-**Muhammad Ahmed**
-
-* GitHub: [https://github.com/ahmed-devx](https://github.com/ahmed-devx)
  
+  ## 👨‍💻 Author
 
----
+**Muhammad Ahmed (AhmedDevx07)**
+🚀 Full Stack MERN Developer
+🎨 Passionate about Modern UI/UX & Scalable Web Apps
+
+### 🌐 Connect With Me
+
+* 🐙 GitHub: https://github.com/AhmedDevx07
+* 💼 LinkedIn: https://linkedin.com/in/ahmeddevx07
 
  
